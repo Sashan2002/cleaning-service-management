@@ -56,7 +56,7 @@ cleaning-service-management/
 └── README.md
 ```
 
-## Setup Instructions
+## Setup Instructions (Local Development)
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -64,85 +64,30 @@ cleaning-service-management/
 
 ### Backend Setup
 
-1. **Create backend directory and initialize:**
-```bash
-mkdir cleaning-service-backend
-cd cleaning-service-backend
-npm init -y
-```
+1. **Clone this repo**
+git clone https://github.com/your-username/cleaning-service-management.git
+cd cleaning-service-management
 
-2. **Install dependencies:**
-```bash
-npm install express cors bcrypt jsonwebtoken sqlite3 dotenv
-npm install -D nodemon
-```
 
-3. **Create server.js file** (copy from the backend artifact above)
-
-4. **Update package.json scripts:**
-```json
-{
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  }
-}
-```
-
-5. **Start the backend server:**
-```bash
+2. **Run the backend**
+cd backend
+npm install
 npm run dev
-```
 
 The backend will run on `http://localhost:5000`
 
 ### Frontend Setup
-
-1. **Create React app:**
-```bash
-npx create-react-app cleaning-service-frontend
-cd cleaning-service-frontend
-```
-
-2. **Install additional dependencies:**
-```bash
-npm install lucide-react
-npm install -D tailwindcss autoprefixer postcss
-```
-
-3. **Configure Tailwind CSS:**
-```bash
-npx tailwindcss init -p
-```
-
-4. **Update tailwind.config.js:**
-```javascript
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-5. **Update src/index.css:**
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-6. **Replace src/App.js** with the frontend code from the artifact above
-
-7. **Start the frontend:**
-```bash
+3. **Run the frontend** 
+cd ../frontend
+npm install
 npm start
-```
 
 The frontend will run on `http://localhost:3000`
+
+4. **Environment Variables (backend/.env)**
+PORT=5000
+JWT_SECRET=your-secret-key
+
 
 ## Deploy to Vercel
 The frontend will run on `https://cleaning-service-management.vercel.app/`
@@ -222,16 +167,16 @@ The application comes with:
 
 ## Features Implemented
 
-✅ User registration and authentication  
-✅ JWT-based security  
-✅ CRUD operations for bookings  
-✅ Service selection dropdown  
-✅ Form validation (client and server-side)  
-✅ Responsive design  
-✅ Error handling  
-✅ Database relationships  
-✅ RESTful API design  
-✅ Clean, modern UI  
+- User registration and authentication  
+- JWT-based security  
+- CRUD operations for bookings  
+- Service selection dropdown  
+- Form validation (client and server-side)  
+- Responsive design  
+- Error handling  
+- Database relationships  
+- RESTful API design  
+- Clean, modern UI  
 
 ## Deployment
 
