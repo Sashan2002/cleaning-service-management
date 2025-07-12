@@ -144,6 +144,9 @@ npm start
 
 The frontend will run on `http://localhost:3000`
 
+## Deploy to Vercel
+The frontend will run on `https://cleaning-service-management.vercel.app/`
+
 ## API Endpoints
 
 ### Authentication
