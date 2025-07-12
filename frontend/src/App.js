@@ -97,16 +97,16 @@ const LoginForm = ({ onLogin, switchToRegister }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">CleanService</h1>
+    <div className="flex items-center justify-center min-h-screen p-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-xl">
+        <div className="mb-8 text-center">
+          <h1 className="mb-2 text-3xl font-bold text-gray-800">CleanService</h1>
           <p className="text-gray-600">Sign in to manage your bookings</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Username</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">Username</label>
             <input
               type="text"
               required
@@ -118,7 +118,7 @@ const LoginForm = ({ onLogin, switchToRegister }) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">Password</label>
             <input
               type="password"
               required
@@ -130,13 +130,13 @@ const LoginForm = ({ onLogin, switchToRegister }) => {
           </div>
 
           {error && (
-            <div className="text-red-600 text-sm text-center">{error}</div>
+            <div className="text-sm text-center text-red-600">{error}</div>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-full px-4 py-2 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
@@ -147,15 +147,15 @@ const LoginForm = ({ onLogin, switchToRegister }) => {
             Don't have an account?{' '}
             <button
               onClick={switchToRegister}
-              className="text-blue-600 hover:text-blue-800 font-medium"
+              className="font-medium text-blue-600 hover:text-blue-800"
             >
               Sign up
             </button>
           </p>
         </div>
 
-        <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-          <p className="text-sm text-gray-600 font-medium">Demo Credentials:</p>
+        <div className="p-4 mt-6 rounded-lg bg-gray-50">
+          <p className="text-sm font-medium text-gray-600">Demo Credentials:</p>
           <p className="text-sm text-gray-600">Username: admin</p>
           <p className="text-sm text-gray-600">Password: admin123</p>
         </div>
@@ -195,16 +195,16 @@ const RegisterForm = ({ onRegister, switchToLogin }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">CleanService</h1>
+    <div className="flex items-center justify-center min-h-screen p-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-xl">
+        <div className="mb-8 text-center">
+          <h1 className="mb-2 text-3xl font-bold text-gray-800">CleanService</h1>
           <p className="text-gray-600">Create your account</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Username</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">Username</label>
             <input
               type="text"
               required
@@ -216,7 +216,7 @@ const RegisterForm = ({ onRegister, switchToLogin }) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">Password</label>
             <input
               type="password"
               required
@@ -228,7 +228,7 @@ const RegisterForm = ({ onRegister, switchToLogin }) => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Confirm Password</label>
+            <label className="block mb-2 text-sm font-medium text-gray-700">Confirm Password</label>
             <input
               type="password"
               required
@@ -240,13 +240,13 @@ const RegisterForm = ({ onRegister, switchToLogin }) => {
           </div>
 
           {error && (
-            <div className="text-red-600 text-sm text-center">{error}</div>
+            <div className="text-sm text-center text-red-600">{error}</div>
           )}
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-full px-4 py-2 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Creating Account...' : 'Create Account'}
           </button>
@@ -257,7 +257,7 @@ const RegisterForm = ({ onRegister, switchToLogin }) => {
             Already have an account?{' '}
             <button
               onClick={switchToLogin}
-              className="text-blue-600 hover:text-blue-800 font-medium"
+              className="font-medium text-blue-600 hover:text-blue-800"
             >
               Sign in
             </button>
@@ -303,15 +303,15 @@ const BookingForm = ({ booking, onSubmit, onCancel, services }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
       <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-md max-h-[90vh] overflow-y-auto">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">
+        <h2 className="mb-6 text-2xl font-bold text-gray-800">
           {booking ? 'Edit Booking' : 'New Booking'}
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block mb-2 text-sm font-medium text-gray-700">
               Customer Name *
             </label>
             <input
@@ -324,12 +324,12 @@ const BookingForm = ({ booking, onSubmit, onCancel, services }) => {
               placeholder="Enter customer name"
             />
             {errors.customer_name && (
-              <p className="text-red-500 text-sm mt-1">{errors.customer_name}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.customer_name}</p>
             )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block mb-2 text-sm font-medium text-gray-700">
               Address *
             </label>
             <textarea
@@ -342,12 +342,12 @@ const BookingForm = ({ booking, onSubmit, onCancel, services }) => {
               rows="3"
             />
             {errors.address && (
-              <p className="text-red-500 text-sm mt-1">{errors.address}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.address}</p>
             )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block mb-2 text-sm font-medium text-gray-700">
               Date & Time *
             </label>
             <input
@@ -360,12 +360,12 @@ const BookingForm = ({ booking, onSubmit, onCancel, services }) => {
               min={new Date().toISOString().slice(0, 16)}
             />
             {errors.date_time && (
-              <p className="text-red-500 text-sm mt-1">{errors.date_time}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.date_time}</p>
             )}
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block mb-2 text-sm font-medium text-gray-700">
               Service Type *
             </label>
             <select
@@ -383,7 +383,7 @@ const BookingForm = ({ booking, onSubmit, onCancel, services }) => {
               ))}
             </select>
             {errors.service_id && (
-              <p className="text-red-500 text-sm mt-1">{errors.service_id}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.service_id}</p>
             )}
           </div>
 
@@ -391,13 +391,13 @@ const BookingForm = ({ booking, onSubmit, onCancel, services }) => {
             <button
               type="button"
               onClick={onCancel}
-              className="flex-1 bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400 transition-colors"
+              className="flex-1 px-4 py-2 text-gray-700 transition-colors bg-gray-300 rounded-lg hover:bg-gray-400"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+              className="flex-1 px-4 py-2 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               {booking ? 'Update' : 'Create'} Booking
             </button>
@@ -424,8 +424,8 @@ const BookingCard = ({ booking, onEdit, onDelete }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-      <div className="flex justify-between items-start mb-4">
+    <div className="p-6 transition-shadow bg-white rounded-lg shadow-md hover:shadow-lg">
+      <div className="flex items-start justify-between mb-4">
         <div>
           <h3 className="text-lg font-semibold text-gray-800">{booking.service_name}</h3>
           <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(booking.status)}`}>
@@ -435,13 +435,13 @@ const BookingCard = ({ booking, onEdit, onDelete }) => {
         <div className="flex gap-2">
           <button
             onClick={() => onEdit(booking)}
-            className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+            className="p-2 text-blue-600 transition-colors rounded-lg hover:bg-blue-50"
           >
             <Edit size={18} />
           </button>
           <button
             onClick={() => onDelete(booking.id)}
-            className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+            className="p-2 text-red-600 transition-colors rounded-lg hover:bg-red-50"
           >
             <Trash2 size={18} />
           </button>
@@ -463,8 +463,8 @@ const BookingCard = ({ booking, onEdit, onDelete }) => {
         </div>
       </div>
 
-      <div className="mt-4 pt-4 border-t border-gray-200">
-        <div className="flex justify-between items-center">
+      <div className="pt-4 mt-4 border-t border-gray-200">
+        <div className="flex items-center justify-between">
           <span className="text-sm text-gray-600">Service Price</span>
           <span className="text-lg font-semibold text-green-600">${booking.service_price}</span>
         </div>
@@ -554,9 +554,9 @@ const Dashboard = ({ user, token, onLogout }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="w-12 h-12 mx-auto mb-4 border-b-2 border-blue-600 rounded-full animate-spin"></div>
           <p className="text-gray-600">Loading...</p>
         </div>
       </div>
@@ -566,16 +566,16 @@ const Dashboard = ({ user, token, onLogout }) => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+      <header className="bg-white border-b shadow-sm">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between py-6">
             <div>
               <h1 className="text-3xl font-bold text-gray-900">CleanService</h1>
               <p className="text-gray-600">Welcome back, {user.username}!</p>
             </div>
             <button
               onClick={onLogout}
-              className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-100 rounded-lg transition-colors"
+              className="flex items-center gap-2 px-4 py-2 text-gray-600 transition-colors rounded-lg hover:text-gray-800 hover:bg-gray-100"
             >
               <LogOut size={20} />
               Logout
@@ -585,12 +585,12 @@ const Dashboard = ({ user, token, onLogout }) => {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Dashboard Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white rounded-lg shadow p-6">
+        <div className="grid grid-cols-1 gap-6 mb-8 md:grid-cols-3">
+          <div className="p-6 bg-white rounded-lg shadow">
             <div className="flex items-center">
-              <div className="p-3 rounded-full bg-blue-100 text-blue-600">
+              <div className="p-3 text-blue-600 bg-blue-100 rounded-full">
                 <Calendar size={24} />
               </div>
               <div className="ml-4">
@@ -600,9 +600,9 @@ const Dashboard = ({ user, token, onLogout }) => {
             </div>
           </div>
           
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="p-6 bg-white rounded-lg shadow">
             <div className="flex items-center">
-              <div className="p-3 rounded-full bg-green-100 text-green-600">
+              <div className="p-3 text-green-600 bg-green-100 rounded-full">
                 <Clock size={24} />
               </div>
               <div className="ml-4">
@@ -614,9 +614,9 @@ const Dashboard = ({ user, token, onLogout }) => {
             </div>
           </div>
           
-          <div className="bg-white rounded-lg shadow p-6">
+          <div className="p-6 bg-white rounded-lg shadow">
             <div className="flex items-center">
-              <div className="p-3 rounded-full bg-purple-100 text-purple-600">
+              <div className="p-3 text-purple-600 bg-purple-100 rounded-full">
                 <User size={24} />
               </div>
               <div className="ml-4">
@@ -628,11 +628,11 @@ const Dashboard = ({ user, token, onLogout }) => {
         </div>
 
         {/* Action Button */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-gray-900">Your Bookings</h2>
           <button
             onClick={() => setShowBookingForm(true)}
-            className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex items-center gap-2 px-6 py-3 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
           >
             <Plus size={20} />
             New Booking
@@ -641,11 +641,11 @@ const Dashboard = ({ user, token, onLogout }) => {
 
         {/* Error Message */}
         {error && (
-          <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+          <div className="p-4 mb-6 border border-red-200 rounded-lg bg-red-50">
             <p className="text-red-800">{error}</p>
             <button
               onClick={() => setError('')}
-              className="text-red-600 hover:text-red-800 text-sm mt-2"
+              className="mt-2 text-sm text-red-600 hover:text-red-800"
             >
               Dismiss
             </button>
@@ -654,21 +654,21 @@ const Dashboard = ({ user, token, onLogout }) => {
 
         {/* Bookings Grid */}
         {bookings.length === 0 ? (
-          <div className="text-center py-12">
-            <div className="mx-auto w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+          <div className="py-12 text-center">
+            <div className="flex items-center justify-center w-24 h-24 mx-auto mb-4 bg-gray-100 rounded-full">
               <Calendar size={32} className="text-gray-400" />
             </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No bookings yet</h3>
-            <p className="text-gray-600 mb-6">Get started by creating your first booking</p>
+            <h3 className="mb-2 text-lg font-medium text-gray-900">No bookings yet</h3>
+            <p className="mb-6 text-gray-600">Get started by creating your first booking</p>
             <button
               onClick={() => setShowBookingForm(true)}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-6 py-3 text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
             >
               Create Your First Booking
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {bookings.map(booking => (
               <BookingCard
                 key={booking.id}
